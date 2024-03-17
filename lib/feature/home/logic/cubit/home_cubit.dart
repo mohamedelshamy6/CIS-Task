@@ -25,7 +25,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   void favouriteChosen(index) {
     //* set item as favourite.
-     for (var item in searchedList) {
+    for (var item in searchedList) {
       if (item.index == index) {
         item.isFavourite = true;
       }
@@ -40,6 +40,7 @@ class HomeCubit extends Cubit<HomeState> {
         item.isFavourite = false;
       }
     }
+    Items.items[index].isFavourite = false;
     emit(HomeFavouriteNotChosen());
   }
 }
