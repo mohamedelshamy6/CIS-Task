@@ -33,7 +33,7 @@ class FavouritesList extends StatelessWidget {
                 trailing: IconButton(
                   onPressed: () {
                     favouriteCubit.removeFromFavourites(e.value.index);
-                    homeCubit.favouriteNotChosen(e.value.inSearchIndex);
+                    homeCubit.favouriteNotChosen(e.value.index);
                   },
                   icon: const Icon(
                     Icons.favorite,

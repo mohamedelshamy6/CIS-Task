@@ -73,8 +73,8 @@ class ItemsList extends StatelessWidget {
                                 //* =========================================================
                                 //*To set item as a favourite or not.
                                 !item.isFavourite!
-                                    ? homeCubit.favouriteChosen(index)
-                                    : homeCubit.favouriteNotChosen(index);
+                                    ? homeCubit.favouriteChosen(item.index)
+                                    : homeCubit.favouriteNotChosen(item.index);
                                 //* =========================================================
                                 //* To add item in the favourites screen or remove it.
                                 item.isFavourite!
@@ -84,7 +84,6 @@ class ItemsList extends StatelessWidget {
                                           name: item.name,
                                           image: item.imageOneName,
                                           index: item.index,
-                                          inSearchIndex: index,
                                           itemModel: item,
                                         ),
                                       )
